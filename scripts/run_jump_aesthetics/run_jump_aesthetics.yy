@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"run_jump_aesthetics",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"run_jump_aesthetics",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

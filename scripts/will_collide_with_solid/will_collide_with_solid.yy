@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"will_collide_with_solid",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"will_collide_with_solid",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
