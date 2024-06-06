@@ -9,7 +9,10 @@ if (distance_to_object(obj_ferris) < 50 && !spoken) {
 		["Wanna try some?", spr_ferris_happy],
 		["Oh, but where are my manners?", spr_ferris_portrait],
 		["My name is Ferris, I run the bakery over there", spr_ferris_portrait],
-		["Pleased to meet you!", spr_ferris_happy]
+		["Pleased to meet you!", spr_ferris_happy],
+		["Brother may I please have some bikkies?", spr_goldie_portrait],
+		["There is only one left", spr_ferris_portrait],
+		["Oh frick", spr_goldie_portrait]
 	]);	
 	spoken = true;
 }
