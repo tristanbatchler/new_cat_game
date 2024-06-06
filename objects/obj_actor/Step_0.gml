@@ -1,3 +1,7 @@
+if (instance_exists(obj_dialogue)) {
+	return;	
+}
+
 /******** Physics ***********/
 var _grounded = will_collide_with_floor(x, y + 1);
 var _can_jump = can_jump();
