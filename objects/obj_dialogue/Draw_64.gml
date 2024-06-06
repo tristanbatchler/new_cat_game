@@ -6,7 +6,8 @@ var _pw = sprite_get_width(portrait_sprite);
 var _ph = sprite_get_height(portrait_sprite);
 var _dw = (spr_pf_width - _pw) / 2;
 var _dh = (spr_pf_height - _ph) / 2;
-draw_sprite_ext(portrait_sprite, 0, _dw * scale, wh - (_ph + _dh) * scale, scale, scale, 0, c_white, 1);
+
+draw_sprite_ext(full_text[1], 0, _dw * scale, wh - (_ph + _dh) * scale, scale, scale, 0, c_white, 1);
 
 var _padding = 20;
 
