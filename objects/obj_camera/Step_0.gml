@@ -1,6 +1,9 @@
-var _target_x = player.x + player.direction_facing * lookahead_distance + player.x_vel;
-var _target_y = player.y - player.sprite_height / 2 + player.y_vel;
-
+var _target_x = target.x;
+var _target_y = target.y;
+if (variable_instance_exists(target, "direction_facing") && variable_instance_exists(target, "lookahead_distance")) {
+	_target_x = target.x + target.direction_facing * lookahead_distance + target.x_vel;
+	_target_y = target.y - target.sprite_height / 2 + target.y_vel;
+}
 
 var _dir = point_direction(x, y, _target_x, _target_y);
 var _dst = distance_to_point(_target_x, _target_y);

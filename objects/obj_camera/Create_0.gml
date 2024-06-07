@@ -1,4 +1,4 @@
-player = instance_find(obj_actor, 0);
+target = instance_find(obj_actor, 0);
 max_spd = 10;
 acc = 1.0;
 spd = 0.0;
