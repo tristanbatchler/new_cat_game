@@ -1,27 +1,27 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_goldie_portrait",
+  "%Name":"spr_ferris_portrait_happy",
   "bboxMode":0,
   "bbox_bottom":47,
-  "bbox_left":3,
-  "bbox_right":44,
-  "bbox_top":3,
+  "bbox_left":0,
+  "bbox_right":47,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d64f3b1e-5a88-4828-a839-660f3f6c07b8","name":"d64f3b1e-5a88-4828-a839-660f3f6c07b8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"35377cc8-8680-45b4-b1e0-547c84c8848e","name":"35377cc8-8680-45b4-b1e0-547c84c8848e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":48,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"68f6b506-7b71-4ad9-8446-92fecc597c25","blendMode":0,"displayName":"default","isLocked":false,"name":"68f6b506-7b71-4ad9-8446-92fecc597c25","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"fb1734b0-f624-4bc3-8aae-1ef3c86e4f38","blendMode":0,"displayName":"default","isLocked":false,"name":"fb1734b0-f624-4bc3-8aae-1ef3c86e4f38","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_goldie_portrait",
+  "name":"spr_ferris_portrait_happy",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_goldie_portrait",
+    "%Name":"spr_ferris_portrait_happy",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_goldie_portrait",
+    "name":"spr_ferris_portrait_happy",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d64f3b1e-5a88-4828-a839-660f3f6c07b8","path":"sprites/spr_goldie_portrait/spr_goldie_portrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"96bd2275-54b0-4eba-a3fd-fcbc9042cc08","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"35377cc8-8680-45b4-b1e0-547c84c8848e","path":"sprites/spr_ferris_portrait_happy/spr_ferris_portrait_happy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"51289bfc-5a11-4c49-b903-1861482d8489","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

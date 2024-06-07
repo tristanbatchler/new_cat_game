@@ -12,7 +12,7 @@ spr_prompt_height = sprite_get_height(spr_prompt);
 ww = window_get_width();
 wh = window_get_height();
 
-portrait_sprite = spr_ferris_portrait;
+portrait_sprite = spr_ferris_portrait_neutral;
 
 scale = 2;
 

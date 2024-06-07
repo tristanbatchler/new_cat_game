@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_ferris_portrait",
+  "%Name":"spr_ferris_portrait_pissed",
   "bboxMode":0,
   "bbox_bottom":47,
   "bbox_left":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"badf8bd6-d177-47b3-a222-26df4e4f465a","name":"badf8bd6-d177-47b3-a222-26df4e4f465a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"429f2144-1f74-4645-9491-79b645919f7c","name":"429f2144-1f74-4645-9491-79b645919f7c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":48,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"feaaa866-f96c-4caf-a885-d57c60ac4ab9","blendMode":0,"displayName":"default","isLocked":false,"name":"feaaa866-f96c-4caf-a885-d57c60ac4ab9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e70fbcd4-948b-465a-bcb3-8c170688f3ad","blendMode":0,"displayName":"default","isLocked":false,"name":"e70fbcd4-948b-465a-bcb3-8c170688f3ad","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_ferris_portrait",
+  "name":"spr_ferris_portrait_pissed",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_ferris_portrait",
+    "%Name":"spr_ferris_portrait_pissed",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_ferris_portrait",
+    "name":"spr_ferris_portrait_pissed",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"badf8bd6-d177-47b3-a222-26df4e4f465a","path":"sprites/spr_ferris_portrait/spr_ferris_portrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c2baebc6-3fb6-4305-bd0d-22677589b62e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"429f2144-1f74-4645-9491-79b645919f7c","path":"sprites/spr_ferris_portrait_pissed/spr_ferris_portrait_pissed.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2db0f2a3-a81f-4c99-b35d-9bdd73d0c4a5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
