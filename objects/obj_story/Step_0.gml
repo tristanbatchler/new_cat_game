@@ -1,7 +1,15 @@
 var _currently_talking = instance_exists(obj_dialogue);
 
+if (sequence >= 0) {
+	obj_player.x_input = 0;
+	obj_player.x_vel = 0;
+	obj_player.sprite_index = obj_player.idle_animation;	
+}
+
 if (sequence == -1 && instance_exists(obj_ferris) && abs(obj_player.x - obj_ferris.x) + abs(obj_player.y - obj_ferris.y) < 100) {
 	audio_play_sound(snd_village_music, 0, true);
+	obj_player.x_input = 0;
+	obj_player.x_vel = 0;
 	obj_player.sprite_index = obj_player.idle_animation;
 	sequence++;
 }
@@ -154,7 +162,7 @@ else if (sequence == 13) {
 	// Goldie dialogue
 	obj_camera.target = obj_goldie;
 	draw_dialogue([
-		["That's the last frickin' staw brother!", spr_goldie_portrait_pissed],
+		["That's the last frickin' straw brother!", spr_goldie_portrait_pissed],
 		["If you ever need legal advice, don't frickin' call me.", spr_goldie_portrait_pissed]
 	]);
 	sequence++;
