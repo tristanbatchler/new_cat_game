@@ -31,7 +31,7 @@ vh = camera_get_view_height(_v);
 
 var _bg_x = ds_map_find_first(background_map_x);
 repeat (ds_map_size(background_map_x)) {
-	layer_x(_bg_x, cam.x - vw / 2);
+	//layer_x(_bg_x, cam.x - vw / 2);
 	_bg_x = ds_map_find_next(background_map_x, _bg_x);
 }
 

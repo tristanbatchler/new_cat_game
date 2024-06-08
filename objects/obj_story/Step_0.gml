@@ -111,6 +111,10 @@ else if (sequence == 10) {
 	obj_ferris.image_xscale = -1;
 	obj_ferris.sprite_index = spr_ferris_eating;
 	if (obj_ferris.image_index >= 2 && obj_ferris.image_index < 3) {
+		if (part_particles_count(global.particle_system_crumbs) <= 0) {
+			part_particles_burst(global.particle_system_crumbs, obj_ferris.x - 4, obj_ferris.y - obj_ferris.sprite_height + 5, ps_crumbs);	
+		}
+		
 		var _eat_snds = [snd_eat_1, snd_eat_2, snd_eat_3];
 		var _playing = false;
 		for (var _i = 0; _i < array_length(_eat_snds); _i++) {
