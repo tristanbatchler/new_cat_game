@@ -1,19 +1,21 @@
 var _currently_talking = instance_exists(obj_dialogue);
 
+if (sequence == -1 && instance_exists(obj_ferris) && abs(obj_player.x - obj_ferris.x) + abs(obj_player.y - obj_ferris.y) < 100) {
+	sequence++;
+}
 
-if (sequence == 0) {
+
+else if (sequence == 0) {
     // Ferris dialogue
-	if (distance_to_object(obj_ferris) < 100) {
-		obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
-		obj_camera.target = obj_ferris;
-	    if (!_currently_talking) {
-	        draw_dialogue([
-	            ["I just finished baking a fresh batch of bikkies. Would you like one?", spr_ferris_portrait_happy], 
-	            ["Oh, but where are my manners?", spr_ferris_portrait_neutral],
-	            ["I'm Ferris, the local baker. My shop is right across the street there.", spr_ferris_portrait_neutral]
-	        ]);
-	        sequence++; 
-	    }
+	obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
+	obj_camera.target = obj_ferris;
+	if (!_currently_talking) {
+	    draw_dialogue([
+	        ["I just finished baking a fresh batch of bikkies. Would you like one?", spr_ferris_portrait_happy], 
+	        ["Oh, but where are my manners?", spr_ferris_portrait_neutral],
+	        ["I'm Ferris, the local baker. My shop is right across the street there.", spr_ferris_portrait_neutral]
+	    ]);
+	    sequence++; 
 	}
 } 
 
@@ -106,7 +108,7 @@ else if (sequence == 10) {
 	obj_camera.target = obj_ferris;
 	obj_ferris.image_xscale = -1;
 	obj_ferris.sprite_index = spr_ferris_eating;
-	if (obj_ferris.image_index >= 3 && obj_ferris.image_index < 4) {
+	if (obj_ferris.image_index >= 2 && obj_ferris.image_index < 3) {
 		var _eat_snds = [snd_eat_1, snd_eat_2, snd_eat_3];
 		var _playing = false;
 		for (var _i = 0; _i < array_length(_eat_snds); _i++) {
@@ -194,7 +196,15 @@ else if (sequence == 18) {
 }
 
 else if (sequence == 19) {
-	// End sequence
 	obj_camera.target = obj_player;
-	sequence = -1;
+	obj_ferris.x_input = 1;
+	sequence++;
+}
+
+else if (sequence == 20) {
+	if (obj_ferris.x - obj_ferris.x > view_wview[0] + 32) {
+		instance_destroy(obj_ferris);
+		// End of sequence
+		sequence = -1;
+	}
 }
