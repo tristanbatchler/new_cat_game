@@ -1,21 +1,26 @@
 var _currently_talking = instance_exists(obj_dialogue);
 
+
 if (sequence == 0) {
     // Ferris dialogue
-    if (!_currently_talking) {
-        draw_dialogue([
-            ["I just finished baking a fresh batch of bikkies. Would you like one?", spr_ferris_portrait_happy], 
-            ["Oh, but where are my manners?", spr_ferris_portrait_neutral],
-            ["I'm Ferris, the local baker. My shop is right across the street there.", spr_ferris_portrait_neutral]
-        ]);
-        sequence++; // Move to the next sequence after initiating the dialogue
-    }
+	if (distance_to_object(obj_ferris) < 100) {
+		obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
+		obj_camera.target = obj_ferris;
+	    if (!_currently_talking) {
+	        draw_dialogue([
+	            ["I just finished baking a fresh batch of bikkies. Would you like one?", spr_ferris_portrait_happy], 
+	            ["Oh, but where are my manners?", spr_ferris_portrait_neutral],
+	            ["I'm Ferris, the local baker. My shop is right across the street there.", spr_ferris_portrait_neutral]
+	        ]);
+	        sequence++; 
+	    }
+	}
 } 
 
 else if (sequence == 1) {
     // Wait for dialogue to finish
     if (!_currently_talking) {
-        sequence++; // Dialogue finished, move to the next sequence
+        sequence++; 
     }
 }
 
@@ -43,50 +48,153 @@ else if (sequence == 4) {
     // Ferris dialogue
     if (!_currently_talking) {
         draw_dialogue([
-            ["I'm always happy to meet new people. I hope you enjoy your stay in our little town", spr_ferris_portrait_happy]
+            ["Pleased to meet you!", spr_ferris_portrait_happy]
         ]);
-        sequence++; // Move to the next sequence after initiating the dialogue
+        sequence++; 
     }
 }
 
 else if (sequence == 5) {
     // Wait for dialogue to finish
     if (!_currently_talking) {
-        sequence++; // Dialogue finished, move to the next sequence
+        sequence++; 
     }
 }
 
 else if (sequence == 6) {
     // Goldie enters right
-    var _goldie = instance_create_layer(obj_ferris.x + view_wview[0] + 32, obj_ferris.y, "Instances", obj_goldie);
-	obj_camera.target = _goldie;
-    _goldie.x_input = -1;
+    instance_create_layer(obj_ferris.x + view_wview[0] + 32, obj_ferris.y, "Instances", obj_goldie);
+	obj_camera.target = obj_goldie;
+    obj_goldie.x_input = -1;
     sequence++;
 }
 
 else if (sequence == 7) {
     // Goldie stops in front of Ferris
-    if (obj_goldie.x <= obj_ferris.x + 32) {
+    if (obj_goldie.x - obj_ferris.x < 50) {
+		obj_ferris.image_xscale = 1;
         obj_goldie.x_input = 0;
-        sequence++;
+		
+		if (abs(obj_goldie.x_vel) <= 0) {
+			sequence++;
+		}
     }
 }
 
 else if (sequence == 8) {
     // Goldie dialogue
+	obj_ferris.image_xscale = 1;
     if (!_currently_talking) {
         draw_dialogue([
-            ["Hello Ferris! I heard you baked some bikkies. Can I have one?", spr_goldie_portrait_happy], 
+            ["Brother may I have a bikkie?", spr_goldie_portrait_happy], 
             ["There's only one left.", spr_ferris_portrait_neutral],
             ["Oh frick.", spr_goldie_portrait_neutral]
         ]);
-        sequence++; // Move to the next sequence after initiating the dialogue
+        sequence++; 
     }
 }
 
 else if (sequence == 9) {
-    // Wait for dialogue to finish
-    if (!_currently_talking) {
-        sequence++; // Dialogue finished, move to the next sequence
+    // Wait for dialogue to finish and wait a second before moving to the next sequence
+    if (!_currently_talking && alarm_get(0) < 0) {
+		alarm_set(0, 60);
     }
+}
+
+else if (sequence == 10) {
+	// Ferris eats the last bikkie
+	obj_camera.target = obj_ferris;
+	obj_ferris.image_xscale = -1;
+	obj_ferris.sprite_index = spr_ferris_eating;
+	if (obj_ferris.image_index >= 3 && obj_ferris.image_index < 4) {
+		var _eat_snds = [snd_eat_1, snd_eat_2, snd_eat_3];
+		var _playing = false;
+		for (var _i = 0; _i < array_length(_eat_snds); _i++) {
+			if (audio_is_playing(_eat_snds[_i])) {
+				_playing = true;
+				break;
+			}
+		}
+		if (!_playing) {
+			audio_play_sound(_eat_snds[irandom(array_length(_eat_snds) - 1)], 10, false);
+		}
+	}
+	
+	if (alarm_get(0) < 0) {
+		alarm_set(0, 240);
+	}
+}
+
+else if (sequence == 11) {
+	// Ferris finishes eating
+	obj_ferris.sprite_index = obj_ferris.idle_animation;
+	obj_ferris.image_xscale = 1;
+	draw_dialogue([
+		["Mmmm, bikkie...", spr_ferris_portrait_happy]
+	]);
+	sequence++;
+}
+
+else if (sequence == 12) {
+	// Wait for dialogue to finish
+	if (!_currently_talking) {
+		sequence++;
+	}
+}
+
+else if (sequence == 13) {
+	// Goldie dialogue
+	obj_camera.target = obj_goldie;
+	draw_dialogue([
+		["That's the last frickin' staw brother!", spr_goldie_portrait_pissed],
+		["If you ever need legal advice, don't frickin' call me.", spr_goldie_portrait_pissed]
+	]);
+	sequence++;
+}
+
+else if (sequence == 14) {
+	// Wait for dialogue to finish
+	if (!_currently_talking) {
+		sequence++;
+	}
+}
+
+else if (sequence == 15) {
+	// Goldie leaves
+	obj_camera.target = obj_player;
+	obj_goldie.x_input = 1;
+	sequence++;
+}
+
+else if (sequence == 16) {
+	// Wait for Goldie to leave
+	if (obj_goldie.x - obj_ferris.x > view_wview[0] + 32) {
+		instance_destroy(obj_goldie);
+		sequence++;
+	}
+}
+
+else if (sequence == 17) {
+	// Ferris dialogue
+	obj_camera.target = obj_ferris;
+	obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
+	draw_dialogue([
+		["...", spr_ferris_portrait_neutral],
+		["I need to make some more bikkies.", spr_ferris_portrait_neutral],
+		["Have a nice day! I hope to see you again soon.", spr_ferris_portrait_happy]
+	]);
+	sequence++;
+}
+
+else if (sequence == 18) {
+	// Wait for dialogue to finish
+	if (!_currently_talking) {
+		sequence++;
+	}
+}
+
+else if (sequence == 19) {
+	// End sequence
+	obj_camera.target = obj_player;
+	sequence = -1;
 }

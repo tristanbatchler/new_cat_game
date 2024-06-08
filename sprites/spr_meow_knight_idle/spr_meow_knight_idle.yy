@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Meow Knight",
-    "path":"folders/Sprites/Meow Knight.yy",
+    "name":"Ferris",
+    "path":"folders/Sprites/Ferris.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
