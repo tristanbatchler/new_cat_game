@@ -1,11 +1,5 @@
 var _currently_talking = instance_exists(obj_dialogue);
 
-if (sequence >= 0) {
-	obj_player.x_input = 0;
-	obj_player.x_vel = 0;
-	obj_player.sprite_index = obj_player.idle_animation;	
-}
-
 if (sequence == -1 && instance_exists(obj_ferris) && abs(obj_player.x - obj_ferris.x) + abs(obj_player.y - obj_ferris.y) < 100) {
 	audio_play_sound(snd_village_music, 0, true);
 	obj_player.x_input = 0;
@@ -218,7 +212,7 @@ else if (sequence == 19) {
 else if (sequence == 20) {
 	if (obj_ferris.x - obj_camera.x > view_wview[0] + 32) {
 		// Fade out the music
-		var _fadeout_seconds = 2;
+		var _fadeout_seconds = 1.2;
 		if (alarm_get(0) < 0) {
 			audio_sound_gain(snd_village_music, 0, _fadeout_seconds * 1000);
 			alarm_set(0, game_get_speed(gamespeed_fps) * _fadeout_seconds);
@@ -229,5 +223,5 @@ else if (sequence == 20) {
 else if (sequence == 21) {
 	instance_destroy(obj_ferris);
 	audio_stop_sound(snd_village_music);
-	sequence = -1;
+	instance_destroy(self);
 }
