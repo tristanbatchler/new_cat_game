@@ -22,3 +22,5 @@ text_idx = 1;
 text_speed = 2;
 
 alarm_set(0, text_speed);
+
+talk_sounds = [snd_talk_1, snd_talk_2, snd_talk_3, snd_talk_4, snd_talk_5];
