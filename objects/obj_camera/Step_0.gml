@@ -1,6 +1,6 @@
 var _target_x = target.x;
 var _target_y = target.y;
-if (variable_instance_exists(target, "direction_facing")) {
+if (target == obj_player) {
 	_target_x = target.x + target.direction_facing * lookahead_distance + target.x_vel;
 	_target_y = target.y - target.sprite_height / 2 + target.y_vel;
 }
