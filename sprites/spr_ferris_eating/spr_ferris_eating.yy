@@ -30,7 +30,7 @@
   "origin":7,
   "parent":{
     "name":"Ferris",
-    "path":"folders/Sprites/Ferris.yy",
+    "path":"folders/Sprites/Actors/Ferris.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

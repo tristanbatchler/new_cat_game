@@ -10,8 +10,8 @@
   "name":"obj_actor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Actors",
+    "path":"folders/Objects/Actors.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,13 +30,13 @@
   "properties":[
     {"$GMObjectProperty":"","%Name":"idle_animation","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"idle_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_meow_knight_idle","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"idle_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_idle","varType":5,},
     {"$GMObjectProperty":"","%Name":"run_animation","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"run_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_meow_knight_run","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"run_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_run","varType":5,},
     {"$GMObjectProperty":"","%Name":"jump_animation","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"jump_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_meow_knight_jump","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"jump_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_jump","varType":5,},
     {"$GMObjectProperty":"","%Name":"jump_animation_parts","filters":[],"listItems":[
         "4",
         "5",
@@ -48,8 +48,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_meow_knight_idle",
-    "path":"sprites/spr_meow_knight_idle/spr_meow_knight_idle.yy",
+    "name":"spr_cat_idle",
+    "path":"sprites/spr_cat_idle/spr_cat_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

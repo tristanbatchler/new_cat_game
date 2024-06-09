@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_meow_knight",
+  "%Name":"obj_child",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_meow_knight",
+  "name":"obj_child",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Actors",
+    "path":"folders/Objects/Actors.yy",
   },
   "parentObjectId":{
     "name":"obj_actor",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_meow_knight_idle",
-    "path":"sprites/spr_meow_knight_idle/spr_meow_knight_idle.yy",
+    "name":"spr_cat_idle",
+    "path":"sprites/spr_cat_idle/spr_cat_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

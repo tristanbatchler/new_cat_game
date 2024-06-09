@@ -46,6 +46,6 @@ var _bg_hspd = ds_map_find_first(background_map_hspd);
 repeat (ds_map_size(background_map_hspd)) {
 	var _hspd = background_map_hspd[? _bg_hspd];
 	layer_hspeed(_bg_hspd, _hspd);
-	_bg_hspd = ds_map_find_next(background_map_x, _bg_hspd);
+	_bg_hspd = ds_map_find_next(background_map_hspd, _bg_hspd);
 }
 	

@@ -11,8 +11,8 @@
   "name":"obj_story",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Stories",
+    "path":"folders/Objects/Stories.yy",
   },
   "parentObjectId":null,
   "persistent":false,

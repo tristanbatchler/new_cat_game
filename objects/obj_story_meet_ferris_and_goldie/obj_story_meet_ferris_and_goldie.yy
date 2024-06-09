@@ -8,8 +8,8 @@
   "name":"obj_story_meet_ferris_and_goldie",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Stories",
+    "path":"folders/Objects/Stories.yy",
   },
   "parentObjectId":{
     "name":"obj_story",
