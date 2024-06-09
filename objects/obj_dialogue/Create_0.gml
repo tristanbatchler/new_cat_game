@@ -1,3 +1,14 @@
+enum ACTOR {
+	GOLDIE,
+	FERRIS
+}
+
+enum EMOTE {
+	HAPPY,
+	PISSED,
+	NEUTRAL
+}
+
 spr_pf = spr_portrait_frame;
 spr_pf_height = sprite_get_height(spr_pf);
 spr_pf_width = sprite_get_width(spr_pf);
@@ -12,12 +23,43 @@ spr_prompt_height = sprite_get_height(spr_prompt);
 ww = window_get_width();
 wh = window_get_height();
 
-portrait_sprite = spr_ferris_portrait_neutral;
-
 scale = 2;
 
 partial_text = "";
-full_text = array_shift(texts);
+saying = array_shift(sayings);
+
+
+var _portrait = "spr_";
+switch (saying[1]) {
+	case ACTOR.FERRIS:
+		_portrait += "ferris_portrait_";
+		break;
+	case ACTOR.GOLDIE:
+		_portrait += "goldie_portrait_";
+		break;
+	default:
+		_portrait += "unknown_portrait_";
+		break;
+}
+
+if (array_length(saying) > 2) {
+	switch (saying[2]) {
+		case EMOTE.HAPPY:
+			_portrait += "happy";
+			break;
+		case EMOTE.PISSED:
+			_portrait += "pissed";
+			break;
+		default:
+			_portrait += "neutral";
+			break;
+	}
+} else {
+	_portrait += "neutral";	
+}
+
+portrait_sprite = asset_get_index(_portrait);
+
 text_idx = 1;
 text_speed = 2;
 

@@ -14,11 +14,11 @@ else if (sequence == 0) {
 	obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
 	obj_camera.target = obj_ferris;
 	if (!_currently_talking) {
-	    draw_dialogue([
-	        ["I just finished baking a fresh batch of bikkies. Would you like one?", spr_ferris_portrait_happy], 
-	        ["Oh, but where are my manners?", spr_ferris_portrait_neutral],
-	        ["I'm Ferris, the local baker. My shop is right across the street there.", spr_ferris_portrait_neutral]
-	    ]);
+	    draw_dialogue(
+	        ["I just finished baking a fresh batch of bikkies. Would you like one?", ACTOR.FERRIS, EMOTE.HAPPY], 
+	        ["Oh, but where are my manners?", ACTOR.FERRIS],
+	        ["I'm Ferris, the local baker. My shop is right across the street there.", ACTOR.FERRIS]
+	    );
 	    sequence++; 
 	}
 } 
@@ -53,9 +53,9 @@ else if (sequence == 3) {
 else if (sequence == 4) {
     // Ferris dialogue
     if (!_currently_talking) {
-        draw_dialogue([
-            ["Pleased to meet you!", spr_ferris_portrait_happy]
-        ]);
+        draw_dialogue(
+            ["Pleased to meet you!", ACTOR.FERRIS, EMOTE.HAPPY]
+        );
         sequence++; 
     }
 }
@@ -91,11 +91,11 @@ else if (sequence == 8) {
     // Goldie dialogue
 	obj_ferris.image_xscale = 1;
     if (!_currently_talking) {
-        draw_dialogue([
-            ["Brother may I have a bikkie?", spr_goldie_portrait_happy], 
-            ["There's only one left.", spr_ferris_portrait_neutral],
-            ["Oh frick.", spr_goldie_portrait_neutral]
-        ]);
+        draw_dialogue(
+            ["Brother may I have a bikkie?", ACTOR.GOLDIE, EMOTE.HAPPY], 
+            ["There's only one left.", ACTOR.FERRIS],
+            ["Oh frick.", ACTOR.GOLDIE]
+        );
         sequence++; 
     }
 }
@@ -139,9 +139,9 @@ else if (sequence == 11) {
 	// Ferris finishes eating
 	obj_ferris.sprite_index = obj_ferris.idle_animation;
 	obj_ferris.image_xscale = 1;
-	draw_dialogue([
-		["Mmmm, bikkie...", spr_ferris_portrait_happy]
-	]);
+	draw_dialogue(
+		["Mmmm, bikkie...", ACTOR.FERRIS, EMOTE.HAPPY]
+	);
 	sequence++;
 }
 
@@ -155,10 +155,10 @@ else if (sequence == 12) {
 else if (sequence == 13) {
 	// Goldie dialogue
 	obj_camera.target = obj_goldie;
-	draw_dialogue([
-		["That's the last frickin' straw brother!", spr_goldie_portrait_pissed],
-		["If you ever need legal advice, don't frickin' call me.", spr_goldie_portrait_pissed]
-	]);
+	draw_dialogue(
+		["That's the last frickin' straw brother!", ACTOR.GOLDIE, EMOTE.PISSED],
+		["If you ever need legal advice, don't frickin' call me.", ACTOR.GOLDIE, EMOTE.PISSED]
+	);
 	sequence++;
 }
 
@@ -188,11 +188,11 @@ else if (sequence == 17) {
 	// Ferris dialogue
 	obj_camera.target = obj_ferris;
 	obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
-	draw_dialogue([
-		["...", spr_ferris_portrait_neutral],
-		["I need to make some more bikkies.", spr_ferris_portrait_neutral],
-		["Have a nice day! I hope to see you again soon.", spr_ferris_portrait_happy]
-	]);
+	draw_dialogue(
+		["...", ACTOR.FERRIS],
+		["I need to make some more bikkies.", ACTOR.FERRIS],
+		["Have a nice day! I hope to see you again soon.", ACTOR.FERRIS, EMOTE.HAPPY]
+	);
 	sequence++;
 }
 

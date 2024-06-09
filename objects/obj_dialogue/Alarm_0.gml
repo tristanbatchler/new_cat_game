@@ -1,4 +1,5 @@
-partial_text += string_char_at(full_text[0], text_idx);
+var _full_text = saying[0];
+partial_text += string_char_at(_full_text, text_idx);
 text_idx++;
 
 var _n_talk_snds = array_length(talk_sounds);
@@ -17,6 +18,6 @@ audio_play_sound(talk_sounds[_idx], 0, false);
 }
 
 
-if (text_idx <= string_length(full_text[0])) {
+if (text_idx <= string_length(_full_text)) {
 	alarm_set(0, text_speed);
 }
