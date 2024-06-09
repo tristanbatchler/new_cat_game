@@ -28,14 +28,17 @@ scale = 2;
 partial_text = "";
 saying = array_shift(sayings);
 
+speaker_name = "???";
 
 var _portrait = "spr_";
 switch (saying[1]) {
 	case ACTOR.FERRIS:
 		_portrait += "ferris_portrait_";
+		speaker_name = "Ferris";
 		break;
 	case ACTOR.GOLDIE:
 		_portrait += "goldie_portrait_";
+		speaker_name = "Goldie";
 		break;
 	default:
 		_portrait += "unknown_portrait_";

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"set_alarm_seconds",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_alarm_seconds",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -36,7 +36,7 @@ else if (sequence == 2) {
 
     if (abs(obj_camera.x - obj_bakery.x) + abs(obj_camera.y - obj_bakery.y) < 100 && alarm_get(0) < 0) {
         // Alarm 0 just increments sequence
-        alarm_set(0, 60);
+        set_alarm_seconds(0, 1);
     }
 }
 
@@ -46,7 +46,7 @@ else if (sequence == 3) {
 
     if (abs(obj_camera.x - obj_ferris.x) + abs(obj_camera.y - obj_ferris.y) < 100 && alarm_get(0) < 0) {
         // Alarm 0 just increments sequence
-        alarm_set(0, 60);
+        set_alarm_seconds(0, 1);
     }
 }
 
@@ -103,7 +103,7 @@ else if (sequence == 8) {
 else if (sequence == 9) {
     // Wait for dialogue to finish and wait a second before moving to the next sequence
     if (!_currently_talking && alarm_get(0) < 0) {
-		alarm_set(0, 60);
+		set_alarm_seconds(0, 1);
     }
 }
 
@@ -131,7 +131,7 @@ else if (sequence == 10) {
 	}
 	
 	if (alarm_get(0) < 0) {
-		alarm_set(0, 240);
+		set_alarm_seconds(0, 4);
 	}
 }
 
@@ -215,7 +215,7 @@ else if (sequence == 20) {
 		var _fadeout_seconds = 1.2;
 		if (alarm_get(0) < 0) {
 			audio_sound_gain(snd_village_music, 0, _fadeout_seconds * 1000);
-			alarm_set(0, game_get_speed(gamespeed_fps) * _fadeout_seconds);
+			set_alarm_seconds(0, _fadeout_seconds);
 		}
 	}
 }
