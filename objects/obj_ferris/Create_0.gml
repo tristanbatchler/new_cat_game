@@ -1,3 +1,3 @@
 event_inherited();
 
-max_x_spd = 3.0;
+max_x_spd = 2.5;

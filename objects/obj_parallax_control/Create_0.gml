@@ -24,21 +24,20 @@ background_map_hspd = ds_map_create();
 background_map_hspd[? layer_get_id("Background_Clouds_Far")] = 0.05;
 background_map_hspd[? layer_get_id("Background_Clouds_Near")] = 0.10;
 
-cam = instance_find(obj_camera, 0);
-var _v = view_get_camera(view_current);
-vw = camera_get_view_width(_v);
-vh = camera_get_view_height(_v);
+cam = view_get_camera(view_current);
+vw = camera_get_view_width(cam);
+vh = camera_get_view_height(cam);
 
 var _bg_x = ds_map_find_first(background_map_x);
 repeat (ds_map_size(background_map_x)) {
-	//layer_x(_bg_x, cam.x - vw / 2);
+	layer_x(_bg_x, camera_get_view_x(cam));
 	_bg_x = ds_map_find_next(background_map_x, _bg_x);
 }
 
 
 var _bg_y = ds_map_find_first(background_map_y);
 repeat (ds_map_size(background_map_y)) {
-    layer_y(_bg_y, cam.y - vh / 2);
+    layer_y(_bg_y, camera_get_view_y(cam));
     _bg_y = ds_map_find_next(background_map_y, _bg_y);
 }
 

@@ -20,4 +20,4 @@ if (!instance_exists(prompt) && _in_prompt_range) {
 			prompt = noone;
 		}
 	}
-}
+}	

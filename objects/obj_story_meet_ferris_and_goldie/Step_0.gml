@@ -34,7 +34,7 @@ else if (sequence == 2) {
     // Camera pans to bakery for a few seconds
     obj_camera.target = obj_bakery;
 
-    if (abs(obj_camera.x - obj_bakery.x) + abs(obj_camera.y - obj_bakery.y) < 100 && alarm_get(0) < 0) {
+    if (abs(obj_camera.x - obj_bakery.x) < 50 && abs(obj_camera.y - obj_bakery.y) < 50 && alarm_get(0) < 0) {
         // Alarm 0 just increments sequence
         set_alarm_seconds(0, 1);
     }
@@ -44,7 +44,7 @@ else if (sequence == 3) {
     // Camera pans back to Ferris
     obj_camera.target = obj_ferris;
 
-    if (abs(obj_camera.x - obj_ferris.x) + abs(obj_camera.y - obj_ferris.y) < 100 && alarm_get(0) < 0) {
+    if (abs(obj_camera.x - obj_ferris.x) < 50 && abs(obj_camera.y - obj_ferris.y) < 50 && alarm_get(0) < 0) {
         // Alarm 0 just increments sequence
         set_alarm_seconds(0, 1);
     }

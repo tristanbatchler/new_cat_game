@@ -31,6 +31,7 @@ if (!_grounded) {
 
 if (!will_collide_with_floor(x + x_vel, y)) {
 	x += x_vel;	
+	
 } else {
 	var _dx = sign(x_vel);
 	while (!will_collide_with_floor(x + _dx, y)) {
@@ -41,6 +42,8 @@ if (!will_collide_with_floor(x + x_vel, y)) {
 
 if (!will_collide_with_floor(x, y + y_vel)) {
 	y += y_vel;	
+
+
 } else {
 	var _dy = sign(y_vel);
 	while (!will_collide_with_floor(x, y + _dy)) {

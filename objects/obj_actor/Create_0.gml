@@ -2,12 +2,12 @@ x_input = 0;
 jump_pressed = false;
 jump_held = false;
 
-max_x_spd = 5.0;
-max_y_spd = 10.0;
-x_accel = 0.75;
-x_decel = 0.9;
-grav = 0.7;
-jump_spd = 10.0;
+max_x_spd = 3.5;
+max_y_spd = 8.0;
+x_accel = 0.65;
+x_decel = 0.8;
+grav = 0.6;
+jump_spd = 8.0;
 
 x_vel = 0.0;
 y_vel = 0.0;

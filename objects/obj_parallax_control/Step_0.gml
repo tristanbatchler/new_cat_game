@@ -1,3 +1,6 @@
+var _cam_x = camera_get_view_x(cam);
+var _cam_y = camera_get_view_y(cam);
+
 var _bg_x = ds_map_find_first(background_map_x);
 repeat (ds_map_size(background_map_x)) {
 	
@@ -6,22 +9,25 @@ repeat (ds_map_size(background_map_x)) {
 		_hspd = background_map_hspd[? _bg_x];
 	}
 	
-	var _multiplier = 0;
-	if (cam.x > vw / 2 && cam.x < room_width - vw / 2) {
-		_multiplier = background_map_x[? _bg_x];
-	}
+	var _multiplier = background_map_x[? _bg_x];
 
-	layer_hspeed(_bg_x, _multiplier * cam.x_vel + _hspd);
+	if (_hspd == 0) {
+		layer_x(_bg_x, _multiplier * _cam_x);
+	} else {
+		var _added_hspd = 0;
+		if (obj_camera.x > RES_W / 2 && obj_camera.x < room_width - RES_W / 2) {
+			_added_hspd = obj_camera.x_vel;		
+		}
+		layer_hspeed(_bg_x, _hspd + _added_hspd);
+	}	
 	
 	_bg_x = ds_map_find_next(background_map_x, _bg_x);
 }
 
 
 
-if (cam.y > vh / 2 && cam.y < room_height - vh / 2) {
-	var _bg_y = ds_map_find_first(background_map_y);
-	repeat (ds_map_size(background_map_y)) {	
-		layer_y(_bg_y, cam.y - vh / 2);
-		_bg_y = ds_map_find_next(background_map_y, _bg_y);
-	}
+var _bg_y = ds_map_find_first(background_map_y);
+repeat (ds_map_size(background_map_y)) {	
+	layer_y(_bg_y, _cam_y);
+	_bg_y = ds_map_find_next(background_map_y, _bg_y);
 }

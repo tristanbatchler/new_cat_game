@@ -20,3 +20,8 @@ if (_dst > max_spd) {
 	x_vel = 0;
 	y_vel = 0;
 }
+
+//x = clamp(x, RES_W / 2, room_width - RES_W / 2);
+//y = clamp(y, RES_W / 2, room_height - RES_H / 2);
+
+camera_set_view_pos(camera, clamp(x - RES_W / 2, 0, room_width - RES_W), clamp(y - RES_H / 2, 0, room_height - RES_H));
