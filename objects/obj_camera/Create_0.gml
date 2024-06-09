@@ -28,3 +28,5 @@ x_vel = 0;
 y_vel = 0;
 max_spd = 10.0;
 spd = 0;
+
+chasing = true;

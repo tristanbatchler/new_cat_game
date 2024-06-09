@@ -21,8 +21,8 @@ background_map_y[? layer_get_id("Background_Mountains_Near")] = 0.90;
 background_map_y[? layer_get_id("Background_Mountains_Nearest")] = 0.88;
 
 background_map_hspd = ds_map_create();
-background_map_hspd[? layer_get_id("Background_Clouds_Far")] = 0.05;
-background_map_hspd[? layer_get_id("Background_Clouds_Near")] = 0.10;
+background_map_hspd[? layer_get_id("Background_Clouds_Far")] = 0//0.05;
+background_map_hspd[? layer_get_id("Background_Clouds_Near")] = 0//0.10;
 
 cam = view_get_camera(view_current);
 vw = camera_get_view_width(cam);

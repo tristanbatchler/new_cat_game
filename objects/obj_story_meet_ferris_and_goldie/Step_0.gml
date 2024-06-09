@@ -11,7 +11,7 @@ if (sequence == -1 && instance_exists(obj_ferris) && abs(obj_player.x - obj_ferr
 
 else if (sequence == 0) {
     // Ferris dialogue
-	obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
+	obj_ferris.direction_facing = sign(obj_player.x - obj_ferris.x);
 	obj_camera.target = obj_ferris;
 	if (!_currently_talking) {
 	    draw_dialogue(
@@ -78,7 +78,7 @@ else if (sequence == 6) {
 else if (sequence == 7) {
     // Goldie stops in front of Ferris
     if (obj_goldie.x - obj_ferris.x < 50) {
-		obj_ferris.image_xscale = 1;
+		obj_ferris.direction_facing = 1;
         obj_goldie.x_input = 0;
 		
 		if (abs(obj_goldie.x_vel) <= 0) {
@@ -89,7 +89,7 @@ else if (sequence == 7) {
 
 else if (sequence == 8) {
     // Goldie dialogue
-	obj_ferris.image_xscale = 1;
+	obj_ferris.direction_facing = 1;
     if (!_currently_talking) {
         draw_dialogue(
             ["Brother may I have a bikkie?", ACTOR.GOLDIE, EMOTE.HAPPY], 
@@ -110,7 +110,7 @@ else if (sequence == 9) {
 else if (sequence == 10) {
 	// Ferris eats the last bikkie
 	obj_camera.target = obj_ferris;
-	obj_ferris.image_xscale = -1;
+	obj_ferris.direction_facing = -1;
 	obj_ferris.sprite_index = spr_ferris_eating;
 	if (obj_ferris.image_index >= 2 && obj_ferris.image_index < 3) {
 		if (part_particles_count(global.particle_system_crumbs) <= 0) {
@@ -138,7 +138,7 @@ else if (sequence == 10) {
 else if (sequence == 11) {
 	// Ferris finishes eating
 	obj_ferris.sprite_index = obj_ferris.idle_animation;
-	obj_ferris.image_xscale = 1;
+	obj_ferris.direction_facing = 1;
 	draw_dialogue(
 		["Mmmm, bikkie...", ACTOR.FERRIS, EMOTE.HAPPY]
 	);
@@ -187,7 +187,7 @@ else if (sequence == 16) {
 else if (sequence == 17) {
 	// Ferris dialogue
 	obj_camera.target = obj_ferris;
-	obj_ferris.image_xscale = sign(obj_player.x - obj_ferris.x);
+	obj_ferris.direction_facing = sign(obj_player.x - obj_ferris.x);
 	draw_dialogue(
 		["...", ACTOR.FERRIS],
 		["I need to make some more bikkies.", ACTOR.FERRIS],

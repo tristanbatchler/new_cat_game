@@ -70,6 +70,4 @@ if (_grounded) {
 	}
 }
 
-if (x_input != 0) {
-	image_xscale = x_input;
-}
+image_xscale = direction_facing;
