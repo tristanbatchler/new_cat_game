@@ -17,7 +17,7 @@ _render_button_pressing = function() {
 		image_yscale, 
 		0, 
 		c_white, 
-		1
+		image_alpha
 	);
 
 	draw_sprite_ext(
@@ -29,6 +29,6 @@ _render_button_pressing = function() {
 		image_yscale,
 		0,
 		make_color_rgb(118, 41, 45),
-		1
+		image_alpha
 	);
 }
