@@ -4,6 +4,5 @@ if (keyboard_check_released(ord("Z"))) {
 			sayings: sayings
 		});
 	}
-	audio_play_sound(snd_confirm, 1, false);
 	instance_destroy();		
 }

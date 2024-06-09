@@ -37,15 +37,13 @@ draw_sprite_ext(
 	1
 );
 
-var _padding = 20;
-
 // Draw the text
 draw_set_color(make_color_rgb(114, 81, 45));
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_text_transformed(
-	spr_pf_width * scale + _padding, 
-	wh - spr_db_height * scale + _padding, 
+	spr_pf_width * scale + padding, 
+	wh - spr_db_height * scale + padding, 
 	partial_text,
 	1.5, 
 	1.5,
@@ -66,14 +64,15 @@ draw_text_transformed(
 )
 
 // Draw the prompt to continue
-draw_sprite_ext(
-	sprite_index, 
-	image_index, 
-	ww - (spr_prompt_width - 1) * scale - _padding, 
-	wh - (spr_prompt_height - 1) * scale - _padding, 
-	scale, 
-	scale, 
-	0, 
-	c_white, 
-	1
-);
+//draw_sprite_ext(
+//	sprite_index, 
+//	image_index, 
+//	ww - (spr_prompt_width - 1) * scale - padding, 
+//	wh - (spr_prompt_height - 1) * scale - padding, 
+//	scale, 
+//	scale, 
+//	0, 
+//	c_white, 
+//	1
+//);
+

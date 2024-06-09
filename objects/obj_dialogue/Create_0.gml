@@ -23,7 +23,7 @@ spr_prompt_height = sprite_get_height(spr_prompt);
 ww = window_get_width();
 wh = window_get_height();
 
-scale = 2;
+scale = 3;
 
 partial_text = "";
 saying = array_shift(sayings);
@@ -69,3 +69,14 @@ text_speed = 2;
 alarm_set(0, text_speed);
 
 talk_sounds = [snd_talk_1, snd_talk_2, snd_talk_3, snd_talk_4, snd_talk_5];
+
+padding = 20;
+
+
+draw_button_prompt(
+	INPUT_ACTION,
+	ww - (spr_prompt_width) * scale - padding, 
+	wh - (spr_prompt_height / 2) * scale - padding, 
+	scale,
+	true
+);
