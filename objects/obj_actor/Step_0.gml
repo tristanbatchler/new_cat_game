@@ -70,4 +70,4 @@ if (_grounded) {
 	}
 }
 
-image_xscale = direction_facing;
+image_xscale = abs(image_xscale) * direction_facing;

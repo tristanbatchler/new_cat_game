@@ -13,7 +13,7 @@ if (obj_player.y_vel != 0) {
 	chasing = true;	
 }
 if (!chasing && abs(obj_player.x_vel) >= obj_player.max_x_spd && alarm_get(0) < 0) {
-	set_alarm_seconds(0, 0.4);
+	set_alarm_seconds(0, chase_seconds);
 } else if (chasing && obj_player.x_vel == 0) {
 	chasing = false;	
 }
@@ -22,17 +22,25 @@ if (!chasing && abs(obj_player.x_vel) >= obj_player.max_x_spd && alarm_get(0) < 
 var _dir = point_direction(x, y, _target_x, _target_y);
 var _dst = point_distance(x, y, _target_x, _target_y);
 
-if (chasing) {
-	spd = clamp(_dst / 10, 0, max_spd);
-} else {
-	spd = clamp(_dst / 50, 0, max_spd);
-	//spd /= 1.1;
-}
-
 
 if (_dst > 0.1) {
+	var _high_spd = clamp(_dst / 10, 0, max_spd);
+	var _low_spd = clamp(_dst / 50, 0, max_spd);
+
+	if (chasing) {
+		spd = _high_spd;
+	} else {
+		if (spd > _low_spd) {
+			spd -= _dst / 50;
+		} 
+		if (spd < _low_spd) {
+			spd = _low_spd;	
+		}
+	}
+	
 	x_vel = lengthdir_x(spd, _dir)
 	y_vel = lengthdir_y(spd, _dir);
+	
 	x += x_vel;
 	y += y_vel;
 

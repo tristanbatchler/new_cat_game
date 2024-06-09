@@ -22,7 +22,7 @@ var _display_height = display_get_height();
 window_set_position((_display_width - _window_width) / 2, (_display_height - _window_height) / 2);
 
 target = obj_player;
-lookahead_distance = 48.0;
+lookahead_distance = 32.0;
 
 x_vel = 0;
 y_vel = 0;
@@ -30,3 +30,4 @@ max_spd = 10.0;
 spd = 0;
 
 chasing = true;
+chase_seconds = 0.3;

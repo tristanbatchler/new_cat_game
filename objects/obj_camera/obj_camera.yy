@@ -39,5 +39,5 @@
     "name":"spr_camera",
     "path":"sprites/spr_camera/spr_camera.yy",
   },
-  "visible":true,
+  "visible":false,
 }
