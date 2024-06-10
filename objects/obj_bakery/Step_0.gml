@@ -20,4 +20,8 @@ if (!instance_exists(prompt) && _in_prompt_range) {
 			prompt = noone;
 		}
 	}
+	
+	if (keyboard_check_released(INPUT_UP)) {
+		room_goto(rm_bakery);	
+	}
 }	

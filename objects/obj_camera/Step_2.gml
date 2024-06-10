@@ -49,4 +49,4 @@ if (_dst > 0.1) {
 	y_vel = 0;
 }
 
-camera_set_view_pos(camera, clamp(x - RES_W / 2, 0, room_width - RES_W), clamp(y - RES_H / 2, 0, room_height - RES_H));
+camera_set_view_pos(camera, clamp(x - res_w / 2, 0, room_width - res_w), clamp(y - res_h / 2, 0, room_height - res_h));

@@ -7,10 +7,10 @@
   "managed":true,
   "name":"obj_player",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"jump_animation_parts","path":"objects/obj_actor/obj_actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[0, 0, 0, 0]",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"idle_animation","path":"objects/obj_actor/obj_actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player_idle",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"run_animation","path":"objects/obj_actor/obj_actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player_run",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"jump_animation","path":"objects/obj_actor/obj_actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player_jump",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"jump_animation_parts","path":"objects/obj_actor/obj_actor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[0, 0, 0, 0]",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"idle_animation","path":"objects/obj_actor/obj_actor.yy",},"resource":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player_idle",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"run_animation","path":"objects/obj_actor/obj_actor.yy",},"resource":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player_run",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"jump_animation","path":"objects/obj_actor/obj_actor.yy",},"resource":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player_jump",},
   ],
   "parent":{
     "name":"Actors",

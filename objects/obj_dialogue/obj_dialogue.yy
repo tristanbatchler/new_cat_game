@@ -30,7 +30,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"","%Name":"sayings","filters":[],"listItems":[],"multiselect":false,"name":"sayings","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[]","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"sayings","filters":[],"listItems":[],"multiselect":false,"name":"sayings","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[]","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -15,7 +15,7 @@ repeat (ds_map_size(background_map_x)) {
 		layer_x(_bg_x, _multiplier * _cam_x);
 	} else {
 		var _added_hspd = 0;
-		if (obj_camera.x > RES_W / 2 && obj_camera.x < room_width - RES_W / 2) {
+		if (obj_camera.x > obj_camera.res_w / 2 && obj_camera.x < room_width - obj_camera.res_w / 2) {
 			_added_hspd = obj_camera.x_vel;		
 		}
 		layer_hspeed(_bg_x, _hspd + _added_hspd);

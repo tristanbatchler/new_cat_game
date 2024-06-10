@@ -1,14 +1,9 @@
-#macro RES_W 420
-#macro RES_H 315
-#macro RES_SCALE 3
-#macro CAM_SMOOTH 0.1
-
 // Create the camera
-camera = camera_create_view(0, 0, RES_W, RES_H);
+camera = camera_create_view(0, 0, res_w, res_h);
 view_set_camera(0, camera);
 
-var _window_width = RES_W * RES_SCALE;
-var _window_height = RES_H * RES_SCALE;
+var _window_width = res_w * res_scale;
+var _window_height = res_h * res_scale;
 
 // Resize window & application surface
 window_set_size(_window_width, _window_height);
