@@ -8,6 +8,7 @@ if (global.storytime) {
 	var _jump_key = INPUT_ACTION;
 	jump_pressed = keyboard_check_pressed(_jump_key);
 	jump_held = keyboard_check(_jump_key);
+	fall_through_held = keyboard_check(INPUT_DOWN);
 }
 
 if (keyboard_check_released(ord("F"))) {

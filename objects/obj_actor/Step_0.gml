@@ -54,6 +54,12 @@ if (!will_collide_with_floor(x, y + y_vel)) {
 }
 
 
+// Fall down throuh semisolid blocks
+var _maybe_semisolid = instance_place(x, y + 1, obj_semisolid);
+if (_maybe_semisolid != noone && fall_through_held) {
+	_maybe_semisolid.allow_pass = true;
+}
+
 
 /********* Aesthetics **********/
 if (_grounded) {

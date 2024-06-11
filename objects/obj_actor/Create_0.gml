@@ -1,6 +1,7 @@
 x_input = 0;
 jump_pressed = false;
 jump_held = false;
+fall_through_held = false;
 
 max_x_spd = 3.7;
 max_y_spd = 8.0;

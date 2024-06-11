@@ -30,19 +30,19 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"idle_animation","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"idle_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_idle","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"idle_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_cat_idle","path":"sprites/spr_cat_idle/spr_cat_idle.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_idle","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"run_animation","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"run_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_run","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"run_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_cat_run","path":"sprites/spr_cat_run/spr_cat_run.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_run","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"jump_animation","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"jump_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_jump","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"jump_animation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_cat_jump","path":"sprites/spr_cat_jump/spr_cat_jump.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cat_jump","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"jump_animation_parts","filters":[],"listItems":[
         "4",
         "5",
         "7",
         "8",
-      ],"multiselect":true,"name":"jump_animation_parts","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[4, 5, 7, 8]","varType":4,},
+      ],"multiselect":true,"name":"jump_animation_parts","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[4, 5, 7, 8]","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

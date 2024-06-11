@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":321,
   "bbox_left":33,
-  "bbox_right":330,
+  "bbox_right":328,
   "bbox_top":85,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2b2f39c8-4478-49eb-ae98-a47491e8d55c","name":"2b2f39c8-4478-49eb-ae98-a47491e8d55c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"92ddce66-ee48-4a64-bef3-6bedd982e5d6","name":"92ddce66-ee48-4a64-bef3-6bedd982e5d6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":360,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"20ae52a9-3d86-499a-bd47-5136aae5e97e","blendMode":0,"displayName":"default","isLocked":false,"name":"20ae52a9-3d86-499a-bd47-5136aae5e97e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"48b36381-c3ff-4fca-8493-d59d261e1375","blendMode":0,"displayName":"default","isLocked":false,"name":"48b36381-c3ff-4fca-8493-d59d261e1375","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_1bakery_background",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2b2f39c8-4478-49eb-ae98-a47491e8d55c","path":"sprites/spr_1bakery_background/spr_1bakery_background.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"906b8057-5c22-4283-b2a7-4cfa8a3a9120","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"92ddce66-ee48-4a64-bef3-6bedd982e5d6","path":"sprites/spr_1bakery_background/spr_1bakery_background.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"39158987-b563-4f21-935a-f8f4f4d460af","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
