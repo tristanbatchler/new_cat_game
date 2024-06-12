@@ -1,13 +1,26 @@
+#macro RES_W 420
+#macro RES_H 315
+#macro RES_SCALE 3
+
+x = obj_player.x;
+y = obj_player.y;
+
 // Create the camera
-camera = camera_create_view(0, 0, res_w, res_h);
+camera = camera_create_view(0, 0, RES_W, RES_H);
 view_set_camera(0, camera);
 
-var _window_width = res_w * res_scale;
-var _window_height = res_h * res_scale;
+view_width = RES_W / zoom;
+view_height = RES_H / zoom;
+
+camera_set_view_size(camera, view_width, view_height);
+
+var _window_width = RES_W * RES_SCALE;
+var _window_height = RES_H * RES_SCALE;
 
 // Resize window & application surface
 window_set_size(_window_width, _window_height);
-surface_resize(application_surface, _window_width, _window_height);
+
+surface_resize(application_surface, _window_width * 2, _window_height * 2); // 2x surface for smoothest camera movement
 
 display_set_gui_size(_window_width, _window_height);
 

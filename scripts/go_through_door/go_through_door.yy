@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"go_through_door",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"go_through_door",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

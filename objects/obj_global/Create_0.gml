@@ -8,3 +8,6 @@ global.controls = ds_map_create();
 #macro INPUT_ACTION ord("Z")
 #macro INPUT_UP vk_up
 #macro INPUT_DOWN vk_down
+
+
+global.storylines = [];

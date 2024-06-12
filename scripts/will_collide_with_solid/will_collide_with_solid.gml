@@ -13,7 +13,7 @@ function will_collide_with_floor(_x, _y) {
 	}
 	
 	var _maybe_semisolid = instance_place(_x, _y, obj_semisolid);
-	if (y_vel >= 0 && _maybe_semisolid != noone && !_maybe_semisolid.allow_pass) {
+	if (_maybe_semisolid != noone && y_vel >= 0 && !_maybe_semisolid.allow_pass) {
 		return true;	
 	}
 	

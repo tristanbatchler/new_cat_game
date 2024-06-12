@@ -49,4 +49,8 @@ if (_dst > 0.1) {
 	y_vel = 0;
 }
 
-camera_set_view_pos(camera, clamp(x - res_w / 2, 0, room_width - res_w), clamp(y - res_h / 2, 0, room_height - res_h));
+camera_set_view_pos(
+	camera, 
+	clamp(x - view_width / 2, 0, room_width - view_width), 
+	clamp(y - view_height / 2, 0, room_height - view_height)
+);
