@@ -27,3 +27,5 @@ extra_grav_for_jump_release = 0.65;
 speaking = false;
 
 finished_landing = true;
+
+override_sprite = false;

@@ -63,9 +63,13 @@ if (_maybe_semisolid != noone && fall_through_held) {
 
 /********* Aesthetics **********/
 if (_grounded) {
-	sprite_index = x_input == 0 ? idle_animation : run_animation;	
+	if (!override_sprite) {
+		sprite_index = x_input == 0 ? idle_animation : run_animation;	
+	}
 } else {
-	sprite_index = jump_animation;
+	if (!override_sprite) {
+		sprite_index = jump_animation;
+	}
 	
 	if (y_vel < -max_y_spd / 10) {
 		image_index = clamp(image_index, 0, jump_animation_parts[0]);	
