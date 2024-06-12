@@ -6,7 +6,11 @@
   ],
   "managed":true,
   "name":"obj_goldie",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"idle_animation","path":"objects/obj_actor/obj_actor.yy",},"resource":{"name":"spr_goldie_idle","path":"sprites/spr_goldie_idle/spr_goldie_idle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_goldie_idle",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"run_animation","path":"objects/obj_actor/obj_actor.yy",},"resource":{"name":"spr_goldie_run","path":"sprites/spr_goldie_run/spr_goldie_run.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_goldie_run",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"propertyId":{"name":"jump_animation","path":"objects/obj_actor/obj_actor.yy",},"resource":{"name":"spr_goldie_jump","path":"sprites/spr_goldie_jump/spr_goldie_jump.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_goldie_jump",},
+  ],
   "parent":{
     "name":"Actors",
     "path":"folders/Objects/Actors.yy",
@@ -33,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cat_idle",
-    "path":"sprites/spr_cat_idle/spr_cat_idle.yy",
+    "name":"spr_goldie_idle",
+    "path":"sprites/spr_goldie_idle/spr_goldie_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
