@@ -69,7 +69,7 @@ else if (sequence == 5) {
 
 else if (sequence == 6) {
     // Goldie enters right
-    instance_create_layer(obj_ferris.x + view_wview[0] + 32, obj_ferris.y, "Instances", obj_goldie);
+    instance_create_layer(obj_camera.x + obj_camera.view_width / 2 + 32, obj_ferris.y, "Instances", obj_goldie);
 	obj_camera.target = obj_goldie;
     obj_goldie.x_input = -1;
     sequence++;
@@ -178,9 +178,9 @@ else if (sequence == 15) {
 
 else if (sequence == 16) {
 	// Wait for Goldie to leave
-	if (obj_goldie.x - obj_ferris.x > view_wview[0] + 32) {
+	if (alarm_get(0) < 0 && obj_goldie.x - obj_camera.x > obj_camera.view_width / 2 + 32) {
 		instance_destroy(obj_goldie);
-		sequence++;
+		set_alarm_seconds(0, 1);
 	}
 }
 
@@ -210,7 +210,7 @@ else if (sequence == 19) {
 }
 
 else if (sequence == 20) {
-	if (obj_ferris.x - obj_camera.x > view_wview[0] + 32) {
+	if (obj_ferris.x - obj_camera.x > obj_camera.view_width / 2 + 32) {
 		// Fade out the music
 		var _fadeout_seconds = 1.2;
 		if (alarm_get(0) < 0) {

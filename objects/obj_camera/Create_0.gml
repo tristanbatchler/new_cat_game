@@ -34,7 +34,7 @@ lookahead_distance = 32.0;
 
 x_vel = 0;
 y_vel = 0;
-max_spd = 10.0;
+max_spd = 20.0;
 spd = 0;
 
 chasing = true;

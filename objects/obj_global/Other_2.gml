@@ -11,3 +11,5 @@ global.controls = ds_map_create();
 
 
 global.storylines = [];
+
+global.debug_speedup_factor = 1;

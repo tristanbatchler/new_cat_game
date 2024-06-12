@@ -25,7 +25,7 @@ draw_set_alpha(1);
 draw_set_color(c_black);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(x, y, text);
+draw_text_transformed(x, y, text, scale, scale, 0);
 
 // Draw the continue prompt
 //draw_sprite_ext(sprite_index, image_index, x + half_box_width - 14, y + half_box_height - 12, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
