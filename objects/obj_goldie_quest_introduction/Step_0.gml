@@ -96,7 +96,7 @@ else if (sequence == 7) {
 else if (sequence == 8) {
 	if (!_currently_talking) {
 	    draw_dialogue(
-	        ["Oh... fwick...", ACTOR.GOLDIE], 
+	        ["Oh... frick...", ACTOR.GOLDIE], 
 	        ["let... me...", ACTOR.GOLDIE],
 	        ["catch... my...", ACTOR.GOLDIE],
 			["fricken...", ACTOR.GOLDIE],
@@ -133,4 +133,34 @@ else if (sequence == 12) {
 		set_alarm_seconds(0, 0.5);
 	}
 }
+
+else if (sequence == 13) {
+	_goldie.x_input = 1;	
+	
+	if (abs(_goldie.x - obj_player.x) < 40) {
+		_goldie.x_input = 0;
+		sequence++;
+	}
+}
+
+else if (sequence == 14) {
+	if (!_currently_talking) {
+	    draw_dialogue(
+	        ["Pleased to meet you, I'm Goldie!", ACTOR.GOLDIE, EMOTE.HAPPY], 
+			["I run this legal firm all by myself", ACTOR.GOLDIE, EMOTE.HAPPY],
+			["Lately I've been working overtime for my latest client, so...", ACTOR.GOLDIE],
+			["...", ACTOR.GOLDIE]
+		);
+		sequence++; 
+	}
+}
+
+else if (sequence == 15) {
+    // Wait for dialogue to finish
+    if (!_currently_talking) {
+		obj_camera.target = obj_player;
+        instance_destroy(self);
+    }
+}
+
 
