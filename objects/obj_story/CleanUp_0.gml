@@ -1,2 +1,4 @@
 global.storytime = false;
-array_push(global.storylines, object_index);
+if (!array_contains(global.storylines_completed, object_index)) {
+	array_push(global.storylines_completed, object_index);
+}

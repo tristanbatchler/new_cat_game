@@ -1,5 +1,9 @@
 var _currently_talking = instance_exists(obj_dialogue);
 
+if (sequence == -1 && !instance_exists(obj_ferris)) {
+	instance_create_layer(x, y, "Instances", obj_ferris);
+}
+
 if (sequence == -1 && instance_exists(obj_ferris) && abs(obj_player.x - obj_ferris.x) + abs(obj_player.y - obj_ferris.y) < 100) {
 	audio_play_sound(snd_village_music, 0, true);
 	obj_player.x_input = 0;

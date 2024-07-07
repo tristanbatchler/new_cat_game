@@ -10,6 +10,6 @@ global.controls = ds_map_create();
 #macro INPUT_DOWN vk_down
 
 
-global.storylines = [];
+global.storylines_completed = [];
 
 global.debug_speedup_factor = 1;
